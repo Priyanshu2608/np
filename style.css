@@ -1,0 +1,352 @@
+:root {
+    --primary-blue: #3A7BBF;
+    --header-blue: #4285f4;
+    --text-dark: #333;
+    --text-gray: #555;
+    --bg-gray: #f5f5f5;
+    --border-color: #ddd;
+    --btn-orange: #f0ad4e;
+    --btn-orange-hover: #ec971f;
+    --white: #fff;
+    --link-blue: #337ab7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--bg-gray);
+    color: var(--text-dark);
+}
+
+/* Header Styles */
+.header {
+    background-color: var(--header-blue);
+    color: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 50px;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.nptel-title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nptel-subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* Main Content Styles */
+.main-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.top-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.btn-logout {
+    background-color: var(--btn-orange);
+    color: var(--white);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.2s;
+}
+
+.btn-logout:hover {
+    background-color: var(--btn-orange-hover);
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--white);
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Profile Section Styles */
+.profile-body {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.profile-image-container {
+    flex-shrink: 0;
+    border: 1px solid var(--border-color);
+    padding: 5px;
+    background: #fff;
+}
+
+.profile-img {
+    display: block;
+    width: 140px;
+    height: 170px;
+    object-fit: cover;
+}
+
+.profile-details {
+    flex-grow: 1;
+    padding-top: 10px;
+    border-left: 2px solid #eee;
+    padding-left: 20px;
+}
+
+.candidate-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.candidate-info p {
+    font-size: 14px;
+    color: var(--text-gray);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.candidate-info i {
+    color: #666;
+    width: 16px;
+    text-align: center;
+}
+
+/* Table Styles */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.results-table th, 
+.results-table td {
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.results-table th {
+    background-color: #f9f9f9;
+    font-weight: 700;
+    color: #333;
+}
+
+.results-table td {
+    color: var(--text-gray);
+}
+
+.btn-details {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: #f8f9fa;
+    border: 1px solid #b3d4fc;
+    color: var(--link-blue);
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.btn-details:hover {
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .profile-body {
+        flex-direction: column;
+    }
+    
+    .profile-details {
+        border-left: none;
+        padding-left: 0;
+        border-top: 2px solid #eee;
+        padding-top: 20px;
+        width: 100%;
+    }
+    
+    .results-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* Details Page Styles */
+.details-main {
+    max-width: 1200px;
+}
+
+.details-main-table th, .details-main-table td {
+    vertical-align: middle;
+}
+
+.btn-download {
+    color: var(--link-blue);
+    text-decoration: none;
+}
+
+.btn-download:hover {
+    text-decoration: underline;
+}
+
+.btn-announce {
+    background: linear-gradient(135deg, #ff4d6d, #ff2a55);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(255, 77, 109, 0.4);
+    margin-bottom: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-announce:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(255, 77, 109, 0.5);
+}
+
+.social-text {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.assignment-section {
+    margin-top: 30px;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.assignment-table th, .assignment-table td {
+    text-align: left;
+    padding: 10px 15px;
+}
+
+.logic-section {
+    margin-top: 30px;
+}
+
+.logic-list {
+    margin-left: 25px;
+    font-size: 13px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.logic-list li {
+    margin-bottom: 5px;
+}
+
+.criteria-section {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.criteria-title {
+    color: blue;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
